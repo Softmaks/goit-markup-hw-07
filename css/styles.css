@@ -183,17 +183,31 @@ h1,h2,h3,h4,h5,h6,p,ul,ol {
   |============================
 */
 .logo {
+/* Mobile style & >*/
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
   text-transform: uppercase;
+  text-decoration: none;
   letter-spacing: 0.03em;
-  margin-right: 76px;
 
   /* Web */
   color: var(--first-logo-color);
 }
+/* Tablet style & >*/
+@media only screen and (min-width: 768px) {
+  .logo {
+    margin: 24px 120px 24px 0px;
+  }
+}
+/* Tablet style & >*/
+@media only screen and (min-width: 1158px) {
+  .logo {
+    margin: 24px 76px 24px 0px;
+  }
+}
+
 
 /* Studio */
 .logo-second-color {
@@ -247,13 +261,13 @@ h1,h2,h3,h4,h5,h6,p,ul,ol {
 /* Tablet style & >*/
 @media only screen and (min-width: 768px) {
   .head-navigation  {
-    margin: 24px 0 24px 0;
+  margin: 0;
   }
 }
 /* Desktop style & >*/
 @media only screen and (min-width: 1158px) {
   .head-navigation  {
-    margin: 24px 0 24px 0;
+  margin: 0;
   }
 }
 
@@ -545,7 +559,7 @@ background-color: var(--second-btnlink-color);
 }
 
 .contact-list {
-
+  display: none;
 }
 /* Tablet style & >*/
 @media only screen and (min-width: 768px) {
@@ -553,6 +567,7 @@ background-color: var(--second-btnlink-color);
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding: 16px 0px;
   }
 }
 /* Desktop style & >*/
@@ -565,14 +580,27 @@ background-color: var(--second-btnlink-color);
 }
 
 
-/* Tablet style & Desktop style >*/
+
+/* Tablet style & >*/
 @media only screen and (min-width: 768px) {
   .contact-list-item {
     font-family: var(--primary-font);
     text-decoration: none;
     font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    color: var(--main-text-color);
+  
+    transition: color var(--timing-fun-duration) var(--timing-fun-animation);
+  }
+}
+/* Desktop style & >*/
+@media only screen and (min-width: 1158px) {
+  .contact-list-item {
+    font-weight: 500;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 24px;
     letter-spacing: 0.02em;
     color: var(--main-text-color);
   
@@ -611,18 +639,37 @@ background-color: var(--second-btnlink-color);
 }
 
 .main-header {
+/* Mobile style & >*/
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 40px;
   letter-spacing: 0.02em;
+  text-align: center;
   color: var(--main-btn-color);
 
-  max-width: 496px;
-  
+  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
 }
+/* Tablet style & >*/
+@media only screen and (min-width: 768px) {
+  .main-header {
+  font-size: 56px;
+  line-height: 60px;
+  max-width: 496px;
+  margin-bottom: 36px;
+  }
+}
+/* Desktop style & >*/
+@media only screen and (min-width: 1158px) {
+  .main-header {
+    margin-bottom: 48px;
+  }
+}
+
+
+
 
 .main-button {
   margin: 0 auto;
@@ -645,7 +692,6 @@ background-color: var(--second-btnlink-color);
 
   transition: background-color var(--timing-fun-duration) var(--timing-fun-animation);
 }
-
 
 .main-button:hover, 
 .main-button:focus {
