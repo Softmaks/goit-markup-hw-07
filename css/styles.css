@@ -61,7 +61,7 @@ html {
   --timing-fun-duration: 250ms;
 
 /* Others */
-  --indent: 72px;
+  --indent: 24px;
   --items: 1;
 }
 
@@ -165,7 +165,26 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-/* reset start */
+
+
+/**
+  |============================
+  | Card set
+  |============================
+*/
+.card-set{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.card-set-items{
+  width: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+
+
+/* Reset start */
 h1,h2,h3,h4,h5,h6,p,ul,ol {
   margin: 0;
 }
@@ -192,11 +211,13 @@ h1,h2,h3,h4,h5,h6,p,ul,ol {
   color: currentColor;
   cursor: pointer;
 }
-/* reset end */
+/* Reset end */
 
 
-
-  
+  /**
+    |====================================================================================
+    |
+  */
 
 /**
   |============================
@@ -689,8 +710,6 @@ background-color: var(--second-btnlink-color);
 }
 
 
-
-
 .main-button {
   margin: 0 auto;
   display: block;
@@ -732,23 +751,26 @@ background-color: var(--second-btnlink-color);
 
 .skills-list {
 /* Mobile style & >*/
+  --items: 1;
   display: flex;
   flex-wrap: wrap;
-  gap:72px 24px;
+  row-gap: 72px;
+  column-gap: 24px;
   justify-content: center;
   align-items: center;
 }
 /* Tablet style & >*/
 @media only screen and (min-width: 768px) {
   .skills-list {
-  width: 736px;
+  --items:2;
   }
 }
 /* Desktop style & >*/
 @media only screen and (min-width: 1158px) {
   .skills-list {
-  width:100%;
+  --items:4;
   flex-wrap: nowrap;
+  row-gap: 0;
   }
 }
 
@@ -778,31 +800,13 @@ background-color: var(--second-btnlink-color);
 }
 
 .skills-text {
-  margin: 0;
   letter-spacing: 0.02em;
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   letter-spacing: 0.02em;
 
   color: var(--main-text-color);
-}
-
-.skill-item {
-/* Mobile style & >*/
-  width: 396px;
-}
-/* Tablet style & >*/
-@media only screen and (min-width: 768px) {
-.skill-item{
-  width: 356px;
-}
-}
-/* Desktop style & >*/
-@media only screen and (min-width: 1158px) {
-  .skill-item{
-  width: 264px;
-}
 }
 
 .visually-hidden {
@@ -818,7 +822,6 @@ background-color: var(--second-btnlink-color);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 
 .skill-ph {
 /* Mobile style & >*/
@@ -872,20 +875,6 @@ background-color: var(--second-btnlink-color);
 
 
 
-/**
-  |============================
-  | Card set
-  |============================
-*/
-.card-set{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.card-set-items{
-  width: calc((100% - var(--indent) - (var(--items) - 1)) / var(--items));
-}
 
 /**
   |============================
@@ -919,9 +908,7 @@ background-color: var(--second-btnlink-color);
   }
 }
 
-
 .team-item {
-  width: 264px;
   background-color: var(--main-bg-color);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -953,8 +940,8 @@ background-color: var(--second-btnlink-color);
 .team-text {
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: 0.02em;
   line-height: 1.5;
+  letter-spacing: 0.02em;
 
   text-align: center;
   color: var(--main-text-color);
