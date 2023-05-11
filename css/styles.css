@@ -115,8 +115,8 @@ h1,h2,h3,h4,h5,h6 {
   padding-left: 16px;
   padding-right: 16px;
 
-  outline: 2.1px solid red;
-  outline-offset: 0;
+  /* outline: 2.1px solid red; */
+  /* outline-offset: 0; */
 }
 
 /* Tablet style & >*/
