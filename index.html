@@ -128,17 +128,33 @@
     <h2 class="main-title">What are we doing</h2>
     <ul class="wotd-list list">
         <li class="wotd-list-item">
-            <img src="./images/waw-m1.jpg" 
+            <img 
+            srcset="./images/waw/img1desktop@1x.jpg, 
+                    ./images/waw/img1desktop@2x.jpg"
+            sizes="(min-width: 1158px) 360px"
             alt="photo mac" 
-            width="360"></li>
+            width="360"
+            loading="lazy">
+    
+        </li>
         <li class="wotd-list-item">
-            <img src="./images/waw-m2.jpg"
+            <img 
+            srcset="./images/waw/img2desktop@1x.jpg, 
+                    ./images/waw/img2desktop@2x.jpg"
+            sizes="(min-width: 1158px) 360px"
             alt="photo phone" 
-            width="360"></li>
+            width="360"
+            loading="lazy">
+        </li>
         <li class="wotd-list-item">
-            <img src="./images/waw-m3.jpg"
+            <img 
+            srcset="./images/waw/img3desktop@1x.jpg, 
+                    ./images/waw/img3desktop@2x.jpg"
+            sizes="(min-width: 1158px) 360px"
             alt="photo ph in hand" 
-            width="360"></li>
+            width="360"
+            loading="lazy">
+        </li>
     </ul>
 </div>
 </section>
@@ -146,14 +162,34 @@
 
 <!-- Section №4 - Our team -->
 <section class="team section">
-    <div class="container">
+    <div class="team-container container">
     <h2 class="main-title">Our Team</h2>
     <ul class="team-list list card-set">
         <li class="team-item card-set-items">
-            <img src="./images/team-img-3.jpg" alt="Product Designer" width="264" height="260">  
+            <picture>
+            <source 
+            media="(min-width: 1158px)" 
+            srcset="./images/team/img@1x.jpg 1x, ./images/team/img@2x.jpg 2x" 
+            type="image/jpg">
+            <source 
+            media="(min-width: 768px)" 
+            srcset="./images/team/img@1x.jpg 1x, ./images/team/img@2x.jpg 2x" 
+            type="image/jpg">
+            <source 
+            media="(max-width: 767px)" 
+            srcset="./images/team/img@1x.jpg 1x, ./images/team/img@2x.jpg 2x" 
+            type="image/jpg">
+            
+            <img
+            src="./images/team/img@1x.jpg"
+            alt="Product Designer" 
+            width="264"
+            height="260"
+            loading="lazy">  
+            </picture>
             <div class="team-descr">       
-            <h3 class="team-names">Mark Guerrero</h3>
-            <p class="team-text">Product Designer</p>
+                <h3 class="team-names">Mark Guerrero</h3>
+                <p class="team-text">Product Designer</p>
                 <ul class="team-socials-list list">
                     <li class="team-socials-item">
                         <a class="team-socials-link" 
@@ -207,7 +243,27 @@
             </div>
         </li>
         <li class="team-item card-set-items">
-            <img src="./images/team-img-2.jpg" alt="Frontend Developer" width="264" height="260">
+            <picture>
+            <source 
+            media="(min-width: 1158px)" 
+            srcset="./images/team/img@1x-1.jpg 1x, ./images/team/img@2x-1.jpg 2x" 
+            type="image/jpg">
+            <source 
+            media="(min-width: 768px)" 
+            srcset="./images/team/img@1x-1.jpg 1x, ./images/team/img@2x-1.jpg 2x" 
+            type="image/jpg">
+            <source 
+            media="(max-width: 767px)" 
+            srcset="./images/team/img@1x-1.jpg 1x, ./images/team/img@2x-1.jpg 2x" 
+            type="image/jpg">
+            
+            <img
+            src="./images/team/img@1x-1.jpg"
+            alt="Frontend Developer" 
+            width="264"
+            height="260"
+            loading="lazy">
+            </picture>
             <div class="team-descr">       
                 <h3 class="team-names">Tom Ford</h3>
                 <p class="team-text">Frontend Developer</p>
@@ -264,11 +320,31 @@
             </div>
         </li>
         <li class="team-item card-set-items"> 
-                        <img src="./images/team-img-1.jpg" alt="Marketing" width="264" height="260">
-                        <div class="team-descr">
-                        <h3 class="team-names">Camila Garcia</h3>
-                        <p class="team-text">Marketing</p>
-                        <ul class="team-socials-list list">
+            <picture>
+            <source 
+            media="(min-width: 1158px)" 
+            srcset="./images/team/img@1x-2.jpg 1x, ./images/team/img@2x-2.jpg 2x" 
+            type="image/jpg">
+            <source 
+            media="(min-width: 768px)" 
+            srcset="./images/team/img@1x-2.jpg 1x, ./images/team/img@2x-2.jpg 2x" 
+            type="image/jpg">
+            <source 
+            media="(max-width: 767px)" 
+            srcset="./images/team/img@1x-2.jpg 1x, ./images/team/img@2x-2.jpg 2x" 
+            type="image/jpg">
+            
+            <img
+            src="./images/team/img@1x-2.jpg"
+            alt="Marketing" 
+            width="264"
+            height="260"
+            loading="lazy">
+            </picture>
+            <div class="team-descr">
+                <h3 class="team-names">Camila Garcia</h3>
+                <p class="team-text">Marketing</p>
+                <ul class="team-socials-list list">
                             <li class="team-socials-item">
                                 <a class="team-socials-link" 
                                 href="https://www.instagram.com/"
@@ -317,15 +393,35 @@
                                 </svg>
                                 </a>    
                                 </li>
-                        </ul>
-                    </div>
-                    </li>
+                </ul>
+            </div>
+        </li>
         <li class="team-item card-set-items">
-                    <img src="./images/team-img.jpg" alt="UI Designer" width="264" height="260">       
-                    <div class="team-descr">       
-                        <h3 class="team-names">Daniel Wilson</h3>
-                        <p class="team-text">UI Designer</p>
-                        <ul class="team-socials-list list">
+            <picture>
+            <source 
+            media="(min-width: 1158px)" 
+            srcset="./images/team/img@1x-3.jpg 1x, ./images/team/img@2x-3.jpg 2x" 
+            type="image/jpg">
+            <source 
+            media="(min-width: 768px)" 
+            srcset="./images/team/img@1x-3.jpg 1x, ./images/team/img@2x-3.jpg 2x" 
+            type="image/jpg">
+            <source 
+            media="(max-width: 767px)" 
+            srcset="./images/team/img@1x-3.jpg 1x, ./images/team/img@2x-3.jpg 2x" 
+            type="image/jpg">
+            
+            <img
+            src="./images/team/img@1x-3.jpg"
+            alt="UI Designer" 
+            width="264"
+            height="260"
+            loading="lazy">
+            </picture>
+            <div class="team-descr">       
+                <h3 class="team-names">Daniel Wilson</h3>
+                <p class="team-text">UI Designer</p>
+                <ul class="team-socials-list list">
                             <li class="team-socials-item">
                                 <a class="team-socials-link" 
                                 href="https://www.instagram.com/"
@@ -374,9 +470,9 @@
                                 </svg>
                                 </a>    
                                 </li>
-                        </ul>
-                    </div>
-                    </li>
+                </ul>
+            </div>
+        </li>
     </ul>
     </div>
 </section>
