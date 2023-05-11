@@ -240,17 +240,15 @@ h1,h2,h3,h4,h5,h6,p,ul,ol {
 /* Tablet style & >*/
 @media only screen and (min-width: 768px) {
   .logo {
-    margin: 24px 120px 24px 0px;
+    margin-right: 120px;
   }
 }
 /* Tablet style & >*/
 @media only screen and (min-width: 1158px) {
   .logo {
-    margin: 24px 76px 24px 0px;
+    margin-right: 76px;
   }
 }
-
-
 /* Studio */
 .logo-second-color {
   color: var(--second-logo-color);
@@ -1221,16 +1219,16 @@ border-top: none;
 .footer-container{
 /* Mobile style & >*/
 display: flex;
-justify-content: center;
+flex-wrap: wrap;
 flex-direction: column;
-
 row-gap: 72px;
 }
   /* Tablet style & >*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
   .footer-container{
+    display: flex;
+    align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: start;
     flex-direction: row;
     gap: 72px 24px;
     max-width: 582px;
@@ -1239,9 +1237,11 @@ row-gap: 72px;
   /* Destop style & >*/
 @media only screen and (min-width: 1158px) {
   .footer-container{
+    display: flex;
     flex-wrap: nowrap;
-    align-items: baseline;
+    flex-direction: row;
     gap: 0;
+    align-items: baseline;
   }
 }
 
@@ -1249,16 +1249,17 @@ row-gap: 72px;
 
 .container-footer-logo{
   /* Mobile style & >*/
-margin: 0;
-padding: 0;
 min-width: 264px;
 margin-right: auto;
 margin-left: auto;
+text-align: center;
 }
   /* Tablet style & >*/
 @media only screen and (min-width: 768px) {
   .container-footer-logo {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
   }
 }
   /* Destop style & >*/
@@ -1279,22 +1280,23 @@ margin-left: auto;
   }
 }
 .footer-logo{
-margin-bottom: 16px;
+  display: block;
+  margin-bottom: 16px;
 }
 
-
-
-
-
 .footer-text{
-  display: inline-block;
   width: 264px;
   font-weight: 400;
   font-size: 16px;
 }
 
-.container-footer-social{
-  margin-right: 80px;
+
+
+@media only screen and (min-width: 1158px) {
+  .container-footer-social {
+    
+    margin-right: 80px;
+  }
 }
 
 .footer-social-title {
@@ -1304,9 +1306,11 @@ margin-bottom: 16px;
   letter-spacing: 0.02em;
   margin: 0;
   margin-bottom: 16px;
-
+  
+  text-align: center;
   color: var( --main-bg-color);
 }
+/* Tablet & Desktop style & >*/
 @media only screen and (min-width: 768px) {
   .footer-social-title{
     text-align: left;
@@ -1316,7 +1320,7 @@ margin-bottom: 16px;
 
 .footer-social-list {
 display: flex;
-align-items: baseline;
+justify-content: center;
 gap:16px;
 }
 
@@ -1351,10 +1355,24 @@ animation: shake 5s;
 }
 
 
+
+.container-footer-subscribe{
+  max-width: 428px;
+  height: 80px;
+  text-align: center;
+}
+
+  /* Tablet style & >*/
+  @media only screen and (min-width: 768px) {
+    .container-footer-subscribe {
+    max-width: 768px;
+    justify-items: flex-start;
+    }
+  }
   /* Destop style & >*/
 @media only screen and (min-width: 1158px) {
   .container-footer-subscribe {
-  margin-left: auto;    
+  text-align: left;
   }
 }
 
@@ -1362,14 +1380,15 @@ animation: shake 5s;
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 16px;
+  row-gap: 16px;
+  justify-content: left;
 }
   /* Tablet style & >*/
 @media only screen and (min-width: 768px) {
   .footer-subscribe {
-    justify-content: left;
     flex-direction: row;
     gap: 24px;
+    justify-content: flex-start;
   }
 }
 
@@ -1384,6 +1403,7 @@ animation: shake 5s;
   border-radius: 4px;
   background-color: var(--footer-bg-color);
   color: var(--main-btn-color);
+
 }
 /* Tablet style & >*/
 @media only screen and (min-width: 768px) {
@@ -1403,10 +1423,11 @@ animation: shake 5s;
 
 .footer-subscribe-btn {
   display: flex;
-  margin: 0 auto;
-
   justify-content: center;
   text-align: center;
+
+  width: 165px;
+  height: 40px;
 
   font-weight: 500;
   font-size: 16px;
@@ -1414,10 +1435,9 @@ animation: shake 5s;
   letter-spacing: 0.04em;
 
   padding: 8px 24px 8px 24px;
-  min-width: 165px;
-  height: 40px;
   gap: 16px;
-  margin-left: 24px;
+  margin-left: auto;
+  margin-right: auto;
 
   border: none;
   color: var(--main-btn-color);
@@ -1490,10 +1510,20 @@ animation: shake 5s;
   opacity var(--timing-fun-duration) var(--timing-fun-animation) 250ms;
 }
 
+@media only screen and (max-width: 472px) {
+  .modal {
+  width:90% ;
+
+  }
+}
+
+
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) rotateX(90deg);
   opacity: 0;
 }
+
+
 
 .modal-btn {
   position: absolute;
