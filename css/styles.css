@@ -1078,17 +1078,49 @@ fill:currentColor;
 */
 
 .portfolio{
-  padding-top: 96px;
+/* Mobile style & >*/
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+/* Tablet style & >*/
+@media only screen and (min-width: 768px) {
+  .portfolio {
+    padding-top: 64px;
+    padding-bottom: 86px;
+  }
+}
+/* Destop style & >*/
+@media only screen and (min-width: 1158px) {
+  .portfolio {
+  padding-top: 100px;
   padding-bottom: 120px;
+  }
 }
 
+
 .pf-filters{
+/* Mobile style & >*/
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: left;
   margin: auto 0;
-  margin-bottom: 72px;
+  margin-bottom: 48px;
   gap: 24px;
 }
+/* Tablet style & >*/
+@media only screen and (min-width: 768px) {
+  .pf-filters {
+  justify-content: center;
+  margin-bottom: 64px;
+  }
+}
+/* Destop style & >*/
+@media only screen and (min-width: 1158px) {
+  .pf-filters {
+  margin-bottom: 84px;
+  }
+}
+
 
 .pf-list-img {
   display: flex;
@@ -1109,7 +1141,7 @@ fill:currentColor;
   background-color: var(--second-bg-color);
   color: var(--first-btnlink-color);
 
-  padding: 12px 24px;
+  padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid var(--border-color);
 
@@ -1118,6 +1150,13 @@ fill:currentColor;
   box-shadow var(--timing-fun-duration) var(--timing-fun-animation),
   background-color var(--timing-fun-duration) var(--timing-fun-animation);
 }
+
+@media only screen and (min-width: 768px) {
+  .pf-butt-filter  {
+    padding: 12px 24px;
+  }
+}
+
 
 .pf-butt-filter:hover,
 .pf-butt-filter:focus {
@@ -1497,25 +1536,33 @@ animation: shake 5s;
   left: 50%;
   transform: translate(-50%, -50%) rotateX(0deg);
 
-  width: 408px;
+  width: 392px;
   min-height: 584px;
-     
+
   background-color: var(--modal-bg-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
 
   opacity: 1;
   transition: transform var(--timing-fun-duration) var(--timing-fun-animation) 250ms,
   opacity var(--timing-fun-duration) var(--timing-fun-animation) 250ms;
 }
 
-@media only screen and (max-width: 472px) {
+@media only screen and (max-width: 428px) {
   .modal {
-  width:90% ;
-
+  /* width: calc(100% - 36px); */
+  width: 90%;
   }
 }
+/* Tablet and Destop style & >*/
+@media only screen and (min-width: 768px) {
+  .modal {
+ padding: 72px 24px 24px 24px;
+ min-width: 408px;
+  }
+}
+
 
 
 .backdrop.is-hidden .modal {
@@ -1559,8 +1606,9 @@ fill: var(--second-bg-color);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--main-title-color);
+  
   margin-bottom: 16px;
+  color: var(--main-title-color);
 }
 
 .modal-form-label {
