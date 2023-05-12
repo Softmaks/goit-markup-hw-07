@@ -611,7 +611,7 @@ background-color: var(--second-btnlink-color);
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding: 16px 0px;
+    /* padding: 16px 0px; */
   }
 }
 /* Desktop style & >*/
@@ -632,7 +632,7 @@ background-color: var(--second-btnlink-color);
     text-decoration: none;
     font-weight: 400;
     font-size: 12px;
-    line-height: 14px;
+    line-height: 1.16;
     letter-spacing: 0.04em;
     color: var(--main-text-color);
   
@@ -642,9 +642,9 @@ background-color: var(--second-btnlink-color);
 /* Desktop style & >*/
 @media only screen and (min-width: 1158px) {
   .contact-list-item {
-    font-weight: 500;
+
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--main-text-color);
   
@@ -669,7 +669,7 @@ background-color: var(--second-btnlink-color);
 .main-pic-description {
   text-align: center;
   background-color: var(--main-title-color);
-  padding: 188px 0;
+  padding: 112px 0;
   text-align: center;
 
   max-width: 1440px;
@@ -709,6 +709,11 @@ background-color: var(--second-btnlink-color);
     background-image: var(--hero-gradient), url(../images/hero/people-office\ 1_dectop-2880@2x.jpg);
     }
 }
+}
+@media only screen and (min-width: 1158px) {
+  .main-pic-description {
+    padding: 188px 0;
+  }
 }
 
 
@@ -835,11 +840,17 @@ background-color: var(--second-btnlink-color);
 .skills-text {
   letter-spacing: 0.02em;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.02em;
-
+  
   color: var(--main-text-color);
+}
+
+@media only screen and (min-width: 1158px) {
+  .skills-text {
+    font-weight: 400;
+  }
 }
 
 .visually-hidden {
@@ -892,6 +903,7 @@ background-color: var(--second-btnlink-color);
 @media only screen and (min-width: 1158px) {
   .what-our-team-doing {
     display: block;
+    padding-top: 0px;
   }
 }
 
@@ -962,6 +974,7 @@ background-color: var(--second-btnlink-color);
 }
 
 .team-item {
+  width: 100%;
   background-color: var(--main-bg-color);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -1400,15 +1413,16 @@ text-align: center;
     display: block;
     margin-bottom: 16px;
     text-align: center;
-
+   
   }
 }
-
-
 .footer-logo{
   display: block;
   margin-bottom: 16px;
+  margin-right: 0;
 }
+
+
 
 
 .footer-text{
