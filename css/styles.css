@@ -403,7 +403,7 @@ background-color: var(--second-btnlink-color);
 
 /**
   |============================
-  | Header Mobile menu
+  | Header - Mobile menu
   |============================
 */
 
@@ -530,7 +530,7 @@ background-color: var(--second-btnlink-color);
     position: absolute;
     top: 16px;
     right: 16px;
-    color: #fff;
+    color: var(--main-bg-color);
   }
   
 
